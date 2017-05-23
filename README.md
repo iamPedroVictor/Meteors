@@ -1,6 +1,6 @@
 # Meteors
 In *Meteors* you should protect the world of meteors with your rockets in a determited time.
-*Meteors* is based on Ludum Dare #35 game maked from Silvio Lasmar.
+*Meteors* is based on Ludum Dare #38 game maked from Silvio Lasmar.
 [You can play here](https://lasmarsilvio.itch.io/meteors)
 
 ## Game Config
