@@ -11,6 +11,11 @@ public class MeteorsManager : MonoBehaviour , IReadyStart {
 
     public float timeRepeating = 3f;
 
+    private void Start()
+    {
+        InvokeRepeating("InstantiateMeteor", timeRepeating, timeRepeating);
+    }
+
     private void InstantiateMeteor(){
 
         Vector3 pos = RandomCircle(center, radiusSpawn);
