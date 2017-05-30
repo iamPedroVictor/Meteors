@@ -19,14 +19,18 @@ public class Orbit : MonoBehaviour {
 
     public SpaceShipMode spaceShip;
 
+	private const string meteorTag = "Meteor";
 
-    public void Start()
-    {
-        spaceShip = SpaceShipMode.Orbit;
-    }
+	private void Awake(){
+		spaceShip = SpaceShipMode.Orbit;
+		centerOrbit = GameObject.FindGameObjectWithTag ("World").transform;
+	}
+		
 
     private void Update()
     {
+		if (GameManager.Instance.state != GameState.GamePlay)
+			return;
         if (Input.GetMouseButtonDown(0))
         {
             if (spaceShip == SpaceShipMode.Orbit)
@@ -39,6 +43,8 @@ public class Orbit : MonoBehaviour {
 
     // Update is called once per frame
     void FixedUpdate () {
+		if (GameManager.Instance.state != GameState.GamePlay)
+			return;
         if(SpaceShipMode.Orbit == spaceShip)
         {
             OrbitAround();
@@ -59,7 +65,7 @@ public class Orbit : MonoBehaviour {
 
     private void CallDestroy()
     {
-        Invoke("DestroyMe", 2f);
+        Invoke("DestroyMe", 1f);
     }
 
     void DestroyMe()
@@ -67,5 +73,14 @@ public class Orbit : MonoBehaviour {
         Destroy(this.gameObject);
         RocketsManager.Instance.Build();
     }
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.transform.CompareTag(meteorTag)){
+			Destroy (collision.gameObject);
+			DestroyMe ();
+
+		}
+	}
 
 }

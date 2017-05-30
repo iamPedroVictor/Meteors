@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class RocketsManager : MonoBehaviour {
 
-    public Vector3[] rocketsOrbitPosition;
+	public RocketData[] rocketsOrbit;
     public GameObject rocketsBase;
-    public GameObject[] rockts;
+	public GameObject[] rockets;
 
 
     private static RocketsManager _instance;
 
-    private static int count;
+    public int count;
 
     public static RocketsManager Instance
     {
@@ -25,15 +25,18 @@ public class RocketsManager : MonoBehaviour {
         }
     }
 
+	void Awake(){
+		rockets = GameObject.FindGameObjectsWithTag ("Rocket");
+	}
+
 
     public void Build()
     {
         count++;
-
-        if (count > 1)
+        if (count == 2)
         {
-            count = 0;
             BuildRockets();
+			count = 0;
         }
     }
 
@@ -41,12 +44,18 @@ public class RocketsManager : MonoBehaviour {
     private void BuildRockets()
     {
         print("Construi Rockets");
-        for(int i = 0; i < rockts.Length; i++)
+        for(int i = 0; i < rockets.Length; i++)
         {
-            if (!rockts[i].activeInHierarchy){
-                rockts[i] = Instantiate(rocketsBase, rocketsOrbitPosition[i], Quaternion.Euler(0,180 * i,-90)) as GameObject;
-            }
+			GameObject rocket = Instantiate(rocketsBase, rocketsOrbit[i].position, Quaternion.Euler(rocketsOrbit[i].rotation));
+			rockets [i] = rocket;
         }
     }
+		
 
+}
+
+[System.Serializable]
+public struct RocketData{
+	public Vector3 position;
+	public Vector3 rotation;
 }

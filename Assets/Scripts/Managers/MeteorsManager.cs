@@ -8,6 +8,18 @@ public class MeteorsManager : MonoBehaviour , IReadyStart {
     public Transform meteorRef;
     public float radiusSpawn;
     public Vector3 center = Vector3.zero;
+	private static MeteorsManager _instance;
+	public static MeteorsManager Instance
+	{
+		get
+		{
+			if (_instance == null)
+			{
+				_instance = FindObjectOfType<MeteorsManager>();
+			}
+			return _instance;
+		}
+	}
 
     public float timeRepeating = 3f;
 
@@ -15,6 +27,7 @@ public class MeteorsManager : MonoBehaviour , IReadyStart {
     {
         InvokeRepeating("InstantiateMeteor", timeRepeating, timeRepeating);
     }
+
 
     private void InstantiateMeteor(){
 
