@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public enum GameState{
@@ -30,6 +31,11 @@ public class GameManager : MonoBehaviour {
 	public int time;
 	public Text timeText;
 
+    public Text finalTimeText;
+    public Text recordText;
+
+    public Animator worldAnimator;
+
 	private void Awake(){
 		state = GameState.GamePlay;
 		GameOverPanel.SetActive (false);
@@ -46,9 +52,29 @@ public class GameManager : MonoBehaviour {
 	}
 		
 	public void GameOver(){
-		state = GameState.GameOver;
-		GameOverPanel.SetActive (true);
-		GamePlayPanel.SetActive (false);
-		PausePanel.SetActive (false);
-	}
+        worldAnimator.SetTrigger("Destroy");
+        GameOverSettings();
+
+    }
+
+    public void GameOverSettings() {
+        state = GameState.GameOver;
+        GameOverPanel.SetActive(true);
+        GamePlayPanel.SetActive(false);
+        PausePanel.SetActive(false);
+        CancelInvoke("Time");
+        finalTimeText.text = "" + time;
+
+        if(time > PlayerPrefs.GetInt("RecordTime"))
+        {
+            SaveRecord(time);
+        }
+
+        recordText.text = ""+PlayerPrefs.GetInt("RecordTime");
+    }
+
+    public void SaveRecord(int newTime)
+    {
+        PlayerPrefs.SetInt("RecordTime", newTime);
+    }
 }
