@@ -21,5 +21,14 @@ public class Meteor : MonoBehaviour {
         }
     }
 
+    public void DestroyMeteor(){
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        GetComponent<Animator>().SetTrigger("Destroy");
+    }
+
+    private void Destroy()
+    {
+        Destroy(this.gameObject);
+    }
 
 }

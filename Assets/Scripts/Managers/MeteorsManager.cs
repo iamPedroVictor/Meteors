@@ -28,6 +28,9 @@ public class MeteorsManager : MonoBehaviour , IReadyStart {
         InvokeRepeating("InstantiateMeteor", 0, timeRepeating);
     }
 
+    public void CancelMeteorsInvoke(){
+        CancelInvoke("InstantiateMeteor");
+    }
 
     private void InstantiateMeteor(){
 

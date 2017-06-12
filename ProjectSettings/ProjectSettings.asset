@@ -6,7 +6,7 @@ PlayerSettings:
   serializedVersion: 11
   productGUID: ff0d406be30b88e45b720206e7f53607
   AndroidProfiler: 0
-  defaultScreenOrientation: 0
+  defaultScreenOrientation: 4
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
@@ -57,10 +57,10 @@ PlayerSettings:
   iosAppInBackgroundBehavior: 0
   displayResolutionDialog: 1
   iosAllowHTTPDownload: 1
-  allowedAutorotateToPortrait: 1
-  allowedAutorotateToPortraitUpsideDown: 1
+  allowedAutorotateToPortrait: 0
+  allowedAutorotateToPortraitUpsideDown: 0
   allowedAutorotateToLandscapeRight: 1
-  allowedAutorotateToLandscapeLeft: 1
+  allowedAutorotateToLandscapeLeft: 0
   useOSAutorotation: 1
   use32BitDisplayBuffer: 1
   disableDepthAndStencilBuffers: 0

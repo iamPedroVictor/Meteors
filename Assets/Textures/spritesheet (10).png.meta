@@ -1,19 +1,17 @@
 fileFormatVersion: 2
-guid: f3bd9182beb7d9a46b8a3d3bc11c9934
-timeCreated: 1496688034
+guid: 40d4393d852e88e4b930d8c90e7e6222
+timeCreated: 1496688074
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: spritesheet (8)_0
-    21300002: spritesheet (8)_1
-    21300004: spritesheet (8)_2
-    21300006: spritesheet (8)_3
-    21300008: spritesheet (8)_4
-    21300010: spritesheet (8)_5
-    21300012: spritesheet (8)_6
-    21300014: spritesheet (8)_7
-    21300016: spritesheet (8)_8
-    21300018: spritesheet (8)_9
+    21300000: spritesheet (10)_0
+    21300002: spritesheet (10)_1
+    21300004: spritesheet (10)_2
+    21300006: spritesheet (10)_3
+    21300008: spritesheet (10)_4
+    21300010: spritesheet (10)_5
+    21300012: spritesheet (10)_6
+    21300014: spritesheet (10)_7
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -84,141 +82,123 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spritesheet (8)_0
+      name: spritesheet (10)_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 27
-        width: 155
-        height: 155
+        x: 1
+        y: 103
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spritesheet (8)_1
+      name: spritesheet (10)_1
       rect:
         serializedVersion: 2
-        x: 228
-        y: 27
-        width: 155
-        height: 155
+        x: 77
+        y: 91
+        width: 88
+        height: 88
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spritesheet (8)_2
+      name: spritesheet (10)_2
       rect:
         serializedVersion: 2
-        x: 431
-        y: 27
-        width: 155
-        height: 155
+        x: 172
+        y: 91
+        width: 87
+        height: 88
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spritesheet (8)_3
+      name: spritesheet (10)_3
       rect:
         serializedVersion: 2
-        x: 634
-        y: 27
-        width: 155
-        height: 155
+        x: 261
+        y: 91
+        width: 88
+        height: 88
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spritesheet (8)_4
+      name: spritesheet (10)_4
       rect:
         serializedVersion: 2
-        x: 837
+        x: 363
         y: 27
-        width: 155
-        height: 155
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spritesheet (8)_5
+      name: spritesheet (10)_5
       rect:
         serializedVersion: 2
-        x: 1040
-        y: 27
-        width: 155
-        height: 155
+        x: 523
+        y: 3
+        width: 176
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spritesheet (8)_6
+      name: spritesheet (10)_6
       rect:
         serializedVersion: 2
-        x: 1243
-        y: 27
-        width: 155
-        height: 155
+        x: 704
+        y: 3
+        width: 176
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spritesheet (8)_7
+      name: spritesheet (10)_7
       rect:
         serializedVersion: 2
-        x: 1446
-        y: 27
-        width: 155
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: spritesheet (8)_8
-      rect:
-        serializedVersion: 2
-        x: 1649
-        y: 27
-        width: 155
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: spritesheet (8)_9
-      rect:
-        serializedVersion: 2
-        x: 1852
-        y: 27
-        width: 155
-        height: 155
+        x: 889
+        y: 3
+        width: 176
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     outline: []
-  spritePackingTag: 
+  spritePackingTag: GamePlay
   userData: 
   assetBundleName: 
   assetBundleVariant: 

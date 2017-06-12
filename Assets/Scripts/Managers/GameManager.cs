@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour {
         PausePanel.SetActive(false);
         CancelInvoke("Time");
         finalTimeText.text = "" + time;
-
+        MeteorsManager.Instance.CancelMeteorsInvoke();
         if(time > PlayerPrefs.GetInt("RecordTime"))
         {
             SaveRecord(time);

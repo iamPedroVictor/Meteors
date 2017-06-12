@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 0bc58554cbf7d4548b3ff0348fd6b35c
-timeCreated: 1496689652
+guid: 68cc0493a90b76245bc7a9e8c57acba1
+timeCreated: 1496687960
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -74,11 +74,19 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
     sprites: []
     outline: []
-  spritePackingTag: 
+  spritePackingTag: GamePlay
   userData: 
   assetBundleName: 
   assetBundleVariant: 

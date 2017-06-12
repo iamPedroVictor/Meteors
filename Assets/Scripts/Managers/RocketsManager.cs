@@ -25,7 +25,14 @@ public class RocketsManager : MonoBehaviour {
         }
     }
 
-	void Awake(){
+    private void Awake()
+    {
+        rockets = new GameObject[2];
+        BuildRockets();
+    }
+
+    void Start(){
+        
 		rockets = GameObject.FindGameObjectsWithTag ("Rocket");
 	}
 
